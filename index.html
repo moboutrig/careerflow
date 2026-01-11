@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="https://schema.org/SoftwareApplication">
+<html lang="en">
 <head>
-    <!-- 1. GOOGLE TAG MANAGER (HEAD SCRIPT) - MUST BE AT TOP -->
+    <!-- 1. GOOGLE TAG MANAGER -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-TQCTN9MS');</script>
-    <!-- End Google Tag Manager -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO METADATA -->
+    <!-- METADATA -->
     <link rel="canonical" href="https://jobflow-verce-demo.vercel.app/">
-    <meta name="description" content="JobFlow Vercel Demo is the ultimate ultra-fast career toolkit portfolio project. Featuring an AI resume builder, job application CRM tracker, and LinkedIn profile optimizer.">
+    <meta name="description" content="JobFlow Vercel Demo is the ultimate ultra-fast career toolkit portfolio project. Featuring an AI resume builder and interactive job application CRM.">
     <meta name="keywords" content="JobFlow, Resume Builder, Job Tracker, AI Career Tool, Portfolio Project, Frontend Demo">
     <meta name="robots" content="index, follow">
 
-    <!-- SOCIAL / OPEN GRAPH -->
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jobflow-verce-demo.vercel.app/">
     <meta property="og:title" content="JobFlow Vercel Demo | Ultra-Fast Career Toolkit">
@@ -27,17 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <title>JobFlow Vercel Demo | Ultra-Fast Career Toolkit</title>
-    
-    <!-- FAVICON -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-
-    <!-- MICRODATA -->
-    <meta itemprop="name" content="JobFlow Vercel Demo">
-    <meta itemprop="applicationCategory" content="BusinessApplication">
-    <meta itemprop="operatingSystem" content="Web Browser">
-    <meta itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-    <meta itemprop="price" content="0">
-    <meta itemprop="priceCurrency" content="USD">
 
     <!-- SCHEMA JSON-LD -->
     <script type="application/ld+json">
@@ -48,317 +37,220 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "url": "https://jobflow-verce-demo.vercel.app/",
-      "description": "JobFlow Vercel Demo is the ultimate ultra-fast career toolkit portfolio project.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "description": "JobFlow Vercel Demo is the ultimate ultra-fast career toolkit.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
 
     <style>
-        :root {
-            --primary: #0066ff;
-            --primary-dark: #0052cc;
-            --text-main: #111827;
-            --text-muted: #4b5563;
-            --bg-light: #f9fafb;
-            --bg-white: #ffffff;
-            --border: #e5e7eb;
-        }
-
+        /* BASE STYLES */
+        :root { --primary: #0066ff; --primary-dark: #0052cc; --text-main: #111827; --text-muted: #4b5563; --bg-light: #f9fafb; --bg-white: #ffffff; --border: #e5e7eb; }
         html { scroll-behavior: smooth; }
-        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-main); line-height: 1.6; }
         
+        /* UTILITIES */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .text-center { text-align: center; }
-        .btn { display: inline-block; padding: 12px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: transform 0.1s ease, box-shadow 0.1s ease; }
-        .btn-primary { background: var(--primary); color: white; border: none; }
+        .btn { display: inline-block; padding: 12px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: transform 0.1s ease; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.3); }
         .btn-outline { border: 1px solid var(--primary); color: var(--primary); margin-left: 10px; }
         
+        /* HEADER */
         header { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); z-index: 100; padding: 15px 0; }
         nav { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; letter-spacing: -1px; }
         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; }
         
+        /* HERO */
         .hero { padding: 120px 0 80px; }
         .hero h1 { font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1.5px; background: linear-gradient(90deg, #111827, #4b5563); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.4rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
         
-        .logos-grid { display: flex; justify-content: center; gap: 40px; opacity: 0.5; filter: grayscale(100%); flex-wrap: wrap; margin-top: 60px; }
-        .logo-item { font-weight: 700; font-size: 1.2rem; }
-
-        section { padding: 100px 0; }
-        .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px; }
-        .section-sub { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 60px; }
-
+        /* GRIDS & CARDS */
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center; }
-
-        .card { background: var(--bg-white); border: 1px solid var(--border); padding: 40px 30px; border-radius: 20px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .card { background: var(--bg-white); border: 1px solid var(--border); padding: 40px 30px; border-radius: 20px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; position: relative; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
         .icon { width: 50px; height: 50px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px; }
-        .card h3 { font-size: 1.25rem; margin-bottom: 12px; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; }
+        
+        /* --- INTERACTIVE ENGINE 1: THE DATA VIEW (TABLE) --- */
+        .hidden-table-container { 
+            display: none; /* Hidden by default */
+            position: absolute; 
+            top: 100%; left: 0; right: 0; 
+            background: white; 
+            border: 1px solid var(--primary); 
+            border-radius: 12px; 
+            padding: 15px; 
+            z-index: 50; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
+            margin-top: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        th { text-align: left; padding: 8px; background: #f3f4f6; color: var(--text-muted); font-weight: 600; border-radius: 4px; }
+        td { padding: 8px; border-bottom: 1px solid #eee; }
+        .status-badge { padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+        .status-applied { background: #dbeafe; color: #1e40af; }
+        .status-interview { background: #dcfce7; color: #166534; }
 
-        .step-number { font-size: 4rem; font-weight: 900; color: #eff6ff; -webkit-text-stroke: 2px var(--primary); line-height: 1; margin-bottom: 10px; }
+        /* --- INTERACTIVE ENGINE 2: THE SIGNUP MODAL --- */
+        dialog { 
+            border: none; 
+            border-radius: 16px; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
+            padding: 40px; 
+            max-width: 400px; 
+            width: 90%; 
+        }
+        dialog::backdrop { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; color: var(--text-main); }
+        input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
+        input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1); }
+        .close-modal { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999; }
 
-        .testimonial { background: var(--bg-light); padding: 40px; border-radius: 20px; }
-        .stars { color: #f59e0b; margin-bottom: 15px; }
-        .user { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
-        .avatar { width: 40px; height: 40px; background: #ddd; border-radius: 50%; }
-
-        .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
-        .faq-question { font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; cursor: pointer; }
-        .faq-answer { color: var(--text-muted); }
-
-        footer { background: #111827; color: white; padding: 80px 0 40px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
-        .footer-col h4 { margin-bottom: 20px; color: #fff; }
-        .footer-col a { display: block; color: #9ca3af; text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+        /* FOOTER */
+        footer { background: #111827; color: white; padding: 80px 0 40px; margin-top: 100px; }
         .fingerprint { border-top: 1px solid #374151; padding-top: 40px; text-align: center; color: #6b7280; font-size: 0.85rem; font-family: monospace; }
 
-        @media (max-width: 1024px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { 
             .hero h1 { font-size: 2.5rem; } 
-            .grid-3, .grid-2 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
+    <!-- GTM NOSCRIPT -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQCTN9MS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- 2. GOOGLE TAG MANAGER (BODY NOSCRIPT) - MUST BE FIRST IN BODY -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQCTN9MS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- --- ENGINE 2: MODAL FORM --- -->
+    <dialog id="signupModal">
+        <button class="close-modal" onclick="document.getElementById('signupModal').close()">&times;</button>
+        <div class="text-center" style="margin-bottom: 20px;">
+            <h2 style="margin: 0;">Create Account</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Start your journey today.</p>
+        </div>
+        <form method="dialog">
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" id="emailInput" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+                <label for="passwordInput">Create Password</label>
+                <input type="password" id="passwordInput" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Get Hired Fast</button>
+        </form>
+    </dialog>
 
-    <header role="banner">
+    <header>
         <div class="container">
             <nav>
                 <a href="/" class="logo">JobFlow Vercel Demo</a>
                 <div class="nav-links">
                     <a href="#features">Features</a>
-                    <a href="#workflow">How it works</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#login" class="btn btn-outline" style="border-radius: 8px; padding: 8px 20px;">Log In</a>
-                    <a href="#signup" class="btn btn-primary" style="border-radius: 8px; padding: 8px 20px;">Get Started</a>
+                    <a href="#" onclick="document.getElementById('signupModal').showModal()">Log In</a>
+                    <button onclick="document.getElementById('signupModal').showModal()" class="btn btn-primary" style="font-size: 0.95rem; padding: 8px 20px;">Sign Up</button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main role="main">
-        <section class="hero text-center" aria-labelledby="hero-title">
+    <main>
+        <section class="hero text-center">
             <div class="container">
-                <h1 id="hero-title" itemprop="headline">Your Career Toolkit,<br>Supercharged.</h1>
-                <p itemprop="description">The fastest way to optimize your LinkedIn, build resumes, and track applications. 100% Free Demo.</p>
+                <h1>Your Career Toolkit,<br>Supercharged.</h1>
+                <p>The fastest way to optimize your LinkedIn, build resumes, and track applications.</p>
                 <div>
-                    <a href="#signup" class="btn btn-primary">Start for Free</a>
-                    <a href="#demo" class="btn btn-outline" style="border-radius: 50px;">View Demo</a>
-                </div>
-                <div>
-                    <p style="font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; margin-top: 60px;">Trusted by candidates at</p>
-                    <div class="logos-grid">
-                        <div class="logo-item">Goggle</div>
-                        <div class="logo-item">Amazun</div>
-                        <div class="logo-item">Facebuk</div>
-                        <div class="logo-item">Netflux</div>
-                        <div class="logo-item">Appel</div>
-                    </div>
+                    <!-- Trigger Modal -->
+                    <button onclick="document.getElementById('signupModal').showModal()" class="btn btn-primary">Start for Free</button>
                 </div>
             </div>
         </section>
 
-        <section id="features" style="background: white;" aria-label="Features" itemprop="featureList">
+        <section id="features">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-title">Everything you need</h2>
-                    <p class="section-sub">Stop juggling spreadsheets and documents. Get organized with our all-in-one suite.</p>
-                </div>
-                
                 <div class="grid-4">
+                    <!-- Resume Card -->
                     <div class="card">
-                        <div class="icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg></div>
+                        <div class="icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"></path></svg></div>
                         <h3>Resume Builder</h3>
-                        <p>AI-powered bullet points that pass the ATS every single time. Generate PDF, Word, and text formats instantly.</p>
+                        <p>AI-powered bullet points that pass the ATS every single time.</p>
                     </div>
-                    <div class="card">
-                        <div class="icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                        <h3>CRM Tracker</h3>
-                        <p>Kanban board style tracking for all your active applications. Drag and drop jobs from "Applied" to "Interviewing".</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
-                        <h3>LinkedIn Boost</h3>
-                        <p>Optimize your headline and about section to attract recruiters. Our algorithms analyze thousands of top profiles.</p>
-                    </div>
-                    <div class="card">
-                        <div class="icon" aria-hidden="true"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                        <h3>Auto-Apply</h3>
-                        <p>Fill out forms in one click using our browser extension. Save over 15 hours per week on data entry.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="workflow" style="background: var(--bg-light);" aria-label="Workflow">
-            <div class="container">
-                <div class="grid-2">
-                    <div>
-                        <h2 class="section-title">How JobFlow Works</h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px;">We streamlined the chaotic process of job hunting into three simple steps.</p>
+                    <!-- --- ENGINE 1: TRACKER CARD WITH TABLE --- -->
+                    <div class="card">
+                        <div class="icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                        <h3>Job Application Tracker</h3>
+                        <p>Kanban board style tracking for all your active applications.</p>
                         
-                        <div style="margin-bottom: 30px;">
-                            <div class="step-number" aria-hidden="true">01</div>
-                            <h3>Import your Profile</h3>
-                            <p style="color: var(--text-muted);">Connect LinkedIn or upload a PDF resume to generate your base profile. We automatically parse your history.</p>
-                        </div>
+                        <!-- The Trigger -->
+                        <button onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block') ? 'none' : 'block'" 
+                                style="margin-top: 15px; background: none; border: none; color: var(--primary); text-decoration: underline; cursor: pointer; text-align: left; padding: 0;">
+                            View Live Demo Data ▼
+                        </button>
 
-                        <div style="margin-bottom: 30px;">
-                            <div class="step-number" aria-hidden="true">02</div>
-                            <h3>Optimize with AI</h3>
-                            <p style="color: var(--text-muted);">Our AI rewrites your bullets to match specific job descriptions, ensuring you get a high match score.</p>
-                        </div>
-
-                        <div>
-                            <div class="step-number" aria-hidden="true">03</div>
-                            <h3>Track & Land</h3>
-                            <p style="color: var(--text-muted);">Move jobs across your board until you get that signed offer letter. Never lose track of a follow-up email again.</p>
+                        <!-- The Hidden Table (Data View) -->
+                        <div class="hidden-table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Company Name</th>
+                                        <th>Role</th>
+                                        <th>Status</th>
+                                        <th>Date Applied</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Google</td>
+                                        <td>Frontend Dev</td>
+                                        <td><span class="status-badge status-interview">Interview</span></td>
+                                        <td>Oct 24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spotify</td>
+                                        <td>UI Engineer</td>
+                                        <td><span class="status-badge status-applied">Applied</span></td>
+                                        <td>Oct 22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Netflix</td>
+                                        <td>Sr. React Dev</td>
+                                        <td><span class="status-badge status-applied">Applied</span></td>
+                                        <td>Oct 20</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.05);" aria-hidden="true">
-                        <div style="background: #f3f4f6; height: 20px; width: 60%; margin-bottom: 20px; border-radius: 10px;"></div>
-                        <div style="background: #f3f4f6; height: 20px; width: 80%; margin-bottom: 20px; border-radius: 10px;"></div>
-                        <div style="background: #e0f2fe; height: 150px; width: 100%; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-weight: bold;">
-                            AI Analysis Complete
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="testimonials" aria-label="Testimonials">
-            <div class="container">
-                <h2 class="section-title text-center">Don't take our word for it</h2>
-                <div class="grid-3" style="margin-top: 60px;">
-                    <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                        <div class="stars" aria-label="5 stars">★★★★★</div>
-                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="5">
-                        </div>
-                        <p itemprop="reviewBody">"I landed a job at a FAANG company in 3 weeks using this toolkit. The AI resume writer is a game changer."</p>
-                        <div class="user">
-                            <div class="avatar" style="background: #ffcccc;"></div>
-                            <div>
-                                <strong itemprop="author">Sarah Jenkins</strong><br>
-                                <span style="font-size: 0.8rem; color: #666;">Software Engineer</span>
-                            </div>
-                        </div>
+                    <!-- LinkedIn Card -->
+                    <div class="card">
+                        <div class="icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                        <h3>LinkedIn Boost</h3>
+                        <p>Optimize your headline and about section to attract recruiters.</p>
                     </div>
-                    <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                        <div class="stars" aria-label="5 stars">★★★★★</div>
-                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="5">
-                        </div>
-                        <p itemprop="reviewBody">"The Kanban board kept me sane. I applied to 50 jobs and knew exactly where I stood with each one."</p>
-                        <div class="user">
-                            <div class="avatar" style="background: #ccffcc;"></div>
-                            <div>
-                                <strong itemprop="author">Mike Ross</strong><br>
-                                <span style="font-size: 0.8rem; color: #666;">Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                        <div class="stars" aria-label="5 stars">★★★★★</div>
-                        <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                            <meta itemprop="ratingValue" content="5">
-                        </div>
-                        <p itemprop="reviewBody">"Unbelievably fast website and easy to use tools. Highly recommended for any serious job seeker."</p>
-                        <div class="user">
-                            <div class="avatar" style="background: #ccccff;"></div>
-                            <div>
-                                <strong itemprop="author">Jessica Lee</strong><br>
-                                <span style="font-size: 0.8rem; color: #666;">UX Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="faq" style="background: white;">
-            <div class="container" style="max-width: 800px;">
-                <h2 class="section-title text-center">Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <div class="faq-question">Is JobFlow Vercel Demo completely free?</div>
-                    <div class="faq-answer">Yes, this project is a portfolio demonstration. You can access the UI components and layout features without any cost. It is designed to showcase modern frontend development practices using semantic HTML and CSS.</div>
+                    <!-- Auto Apply Card -->
+                    <div class="card">
+                        <div class="icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+                        <h3>Auto-Apply</h3>
+                        <p>Fill out forms in one click using our browser extension.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">How does the AI Resume Builder work?</div>
-                    <div class="faq-answer">The AI Resume Builder concept uses advanced natural language processing (NLP) to analyze your existing experience. It then compares it against the job description you are targeting to suggest optimized bullet points, ensuring your resume passes Applicant Tracking Systems (ATS).</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Can I export my data from the CRM?</div>
-                    <div class="faq-answer">Absolutely. The Job Application Tracker allows you to export your data into CSV or JSON formats. This ensures you always have a backup of your application history, interview dates, and recruiter contact information.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Does this work on Mobile devices?</div>
-                    <div class="faq-answer">Yes, JobFlow is fully responsive. While we do not use AMP (Accelerated Mobile Pages), our code is highly optimized for performance, earning a 100/100 score on Core Web Vitals for mobile devices.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is my data secure?</div>
-                    <div class="faq-answer">Security is our top priority. All user data is encrypted at rest and in transit. We strictly adhere to privacy regulations and do not share your personal information with third-party recruiters without your explicit consent.</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="cta" style="background: var(--primary); color: white; text-align: center;" aria-label="Call to Action">
-            <div class="container">
-                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px;">Ready to get hired?</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Join 10,000+ job seekers today.</p>
-                <a href="#signup" style="background: white; color: var(--primary); padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem;">Create Free Account</a>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="/" class="logo" style="color: white; margin-bottom: 20px; display: inline-block;">JobFlow Vercel</a>
-                    <p style="color: #9ca3af; font-size: 0.9rem;">Your complete AI career copilot. Optimized for speed and results.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <a href="#">Resume Builder</a>
-                    <a href="#">Job Tracker</a>
-                    <a href="#">LinkedIn Tool</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <a href="#">About</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Careers</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Security</a>
-                </div>
-            </div>
-            
             <div class="fingerprint">
                 <p>Unique Project ID: JobFlow-99-Alpha-Test</p>
                 <p>&copy; 2026 JobFlow Vercel Demo. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
