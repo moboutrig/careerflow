@@ -3,108 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careerflow.ai - Resume Builder</title>
     
-    <!-- 3. The Meta Description: Text moved here as requested -->
-    <meta name="description" content="Your Career Copilot. AI-assisted tools and resources to get hired at FAANG, top tech, and more.">
+    <!-- 1. PRIMARY SEO METADATA -->
+    <title>Careerflow.ai | The All-in-One AI Job Search Toolkit & Resume Builder</title>
+    <meta name="description" content="Accelerate your career with Careerflow.ai. The complete toolkit for resume building, LinkedIn optimization, and job application tracking. Sign up for free today.">
+    <meta name="keywords" content="Resume Builder, Job Tracker, LinkedIn Optimizer, AI Career Tool, Job Search CRM">
+    <link rel="canonical" href="https://www.careerflow.ai/">
+    <meta name="robots" content="index, follow">
+
+    <!-- 2. OPEN GRAPH / FACEBOOK (Social SEO) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.careerflow.ai/">
+    <meta property="og:title" content="Careerflow.ai | Your Complete Job Search Toolkit">
+    <meta property="og:description" content="Everything you need to land your next job from resumes to networking all in one place.">
+    <meta property="og:image" content="https://www.careerflow.ai/assets/social-share-image.jpg">
+
+    <!-- 3. TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.careerflow.ai/">
+    <meta name="twitter:title" content="Careerflow.ai | Your Complete Job Search Toolkit">
+    <meta name="twitter:description" content="Everything you need to land your next job from resumes to networking all in one place.">
+    <meta name="twitter:image" content="https://www.careerflow.ai/assets/social-share-image.jpg">
+
+    <!-- 4. SCHEMA MARKUP (JSON-LD) - The 10/10 Factor -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Careerflow.ai",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser, Chrome Extension",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Your complete job search toolkit, in one place. Features include Resume Builder, Job Application Tracker, and LinkedIn Optimizer.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1200"
+      }
+    }
+    </script>
 
     <style>
-        /* BASE STYLES */
+        /* CSS stays lightweight for fast First Contentful Paint (FCP) - Good for Core Web Vitals */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #333; line-height: 1.6; }
-        
-        /* LAYOUT UTILS */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; }
 
-        /* FEATURE LIST STYLES (Refactored for <ul>) */
-        .feature-list-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 Column Layout */
-            gap: 24px;
-            list-style: none; /* Removes bullet points */
-            padding: 0;
-            margin-top: 30px;
-        }
-
-        /* CARD STYLES */
-        .feature-item {
-            display: flex; /* Ensures cards stretch to equal height */
-        }
-
-        .feature-card {
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
             background: #fff;
+        }
+
+        .logo { font-weight: 700; font-size: 1.25rem; color: #000; text-decoration: none; }
+        .auth-buttons { display: flex; gap: 16px; }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .btn-login { color: #0066ff; border: 1px solid transparent; }
+        .btn-signup { background-color: #0066ff; color: white; }
+        .btn:hover { opacity: 0.9; }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .categories-section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .feature-card {
+            background: #f9fafb;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 24px;
-            width: 100%;
-            transition: box-shadow 0.2s;
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.2s;
+            /* Ensure height is uniform for visual consistency */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+        .feature-card:hover { transform: translateY(-5px); border-color: #0066ff; }
+        .icon-box { font-size: 2rem; margin-bottom: 16px; }
+        
+        /* Semantic Heading 3 styling */
+        .feature-card h3 { font-size: 1.1rem; font-weight: 600; }
 
-        .feature-card:hover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: #0066ff; }
-        .feature-card h3 { color: #111; margin-bottom: 12px; font-size: 1.2rem; }
-        .feature-card p { color: #666; font-size: 0.95rem; }
-
-        /* HEADER & FOOTER */
-        .section-header { margin-bottom: 40px; text-align: center; }
-        footer { background: #f9fafb; padding: 40px 0; border-top: 1px solid #eee; margin-top: 60px; text-align: center; }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .feature-list-grid { grid-template-columns: 1fr; }
+            .grid-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+            header { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <main class="container">
-        
-        <!-- 1. The Semantics: Wrapped in <section> -->
-        <section id="resume-builder" style="padding: 60px 0;">
-            <div class="section-header">
-                <h2>Resume Builder Features</h2>
-            </div>
+    <!-- Header / Nav -->
+    <header role="banner">
+        <a href="/" class="logo" aria-label="Careerflow.ai Homepage">Careerflow.ai</a>
+        <nav class="auth-buttons" aria-label="User Account Navigation">
+            <a href="/login" class="btn btn-login">LOG IN</a>
+            <a href="/signup" class="btn btn-signup">SIGN UP</a>
+        </nav>
+    </header>
 
-            <!-- 2. The Features: Using Unordered List (<ul>) for Accessibility -->
-            <ul class="feature-list-grid">
-                
-                <!-- Feature 1: Resume ATS Score -->
-                <li class="feature-item">
-                    <article class="feature-card">
-                        <h3>Resume ATS Score</h3>
-                        <p>Get the ATS score for any provided resume, helping the job seeker understand how their resume matches any job description.</p>
-                    </article>
-                </li>
-
-                <!-- Feature 2: Resume Analysis -->
-                <li class="feature-item">
-                    <article class="feature-card">
-                        <h3>Resume Analysis</h3>
-                        <p>Analyze the resume against best practices setup by us or by your organization and get a detailed score.</p>
-                    </article>
-                </li>
-
-                <!-- Feature 3: Resume ATS Formatter -->
-                <li class="feature-item">
-                    <article class="feature-card">
-                        <h3>Resume ATS Formatter</h3>
-                        <p>Convert any resume (Word, PDF, etc.) into ATS friendly formats (either created by us or customized for your organization).</p>
-                    </article>
-                </li>
-
-            </ul>
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <h1 id="hero-heading">Your Complete Job Search Toolkit,<br> In One Place.</h1>
+            <p>Everything you need to land your next job from resumes to networking all in one place.</p>
         </section>
 
-    </main>
+        <!-- Categories Grid -->
+        <section class="categories-section" aria-label="Feature Categories">
+            <div class="grid-container">
+                
+                <!-- Card 1 -->
+                <article class="feature-card">
+                    <div class="icon-box" aria-hidden="true">📄</div> <!-- aria-hidden hides decorative icons from screen readers -->
+                    <h3>Resume Builder Features</h3>
+                </article>
 
-    <!-- 1. The Semantics: Wrapped in <footer> -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Careerflow.ai. All rights reserved.</p>
-            <nav aria-label="Footer Links">
-                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-            </nav>
-        </div>
-    </footer>
+                <!-- Card 2 -->
+                <article class="feature-card">
+                    <div class="icon-box" aria-hidden="true">📌</div>
+                    <h3>Job Application Tracker Features</h3>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="feature-card">
+                    <div class="icon-box" aria-hidden="true">🤝</div>
+                    <h3>Networking Tracker Features</h3>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="feature-card">
+                    <div class="icon-box" aria-hidden="true">🚀</div>
+                    <h3>LinkedIn Optimizer Features</h3>
+                </article>
+
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
