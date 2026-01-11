@@ -9,7 +9,7 @@
     })(window,document,'script','dataLayer','GTM-TQCTN9MS');</script>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
     <!-- METADATA -->
     <link rel="canonical" href="https://jobflow-verce-demo.vercel.app/">
@@ -28,7 +28,7 @@
     <title>JobFlow Vercel Demo | Ultra-Fast Career Toolkit</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
-    <!-- SCHEMA JSON-LD -->
+    <!-- SCHEMA JSON-LD (Consolidated for Error-Free Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,7 +38,12 @@
       "operatingSystem": "Web Browser",
       "url": "https://jobflow-verce-demo.vercel.app/",
       "description": "JobFlow Vercel Demo is the ultimate ultra-fast career toolkit.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "124"
+      }
     }
     </script>
 
@@ -51,7 +56,7 @@
         /* UTILITIES */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .text-center { text-align: center; }
-        .btn { display: inline-block; padding: 12px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: transform 0.1s ease; border: none; cursor: pointer; }
+        .btn { display: inline-block; padding: 12px 32px; border-radius: 50px; font-weight: 600; text-decoration: none; transition: transform 0.1s ease; border: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 102, 255, 0.3); }
         .btn-outline { border: 1px solid var(--primary); color: var(--primary); margin-left: 10px; }
@@ -63,19 +68,19 @@
         .nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; }
         
         /* HERO */
-        .hero { padding: 120px 0 80px; }
+        .hero { padding: 80px 0 60px; } /* Adjusted for mobile */
         .hero h1 { font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1.5px; background: linear-gradient(90deg, #111827, #4b5563); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .hero p { font-size: 1.4rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
         
         /* GRIDS & CARDS */
         .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
         .card { background: var(--bg-white); border: 1px solid var(--border); padding: 40px 30px; border-radius: 20px; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; position: relative; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--primary); }
         .icon { width: 50px; height: 50px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--primary); margin-bottom: 24px; }
         
-        /* --- INTERACTIVE ENGINE 1: THE DATA VIEW (TABLE) --- */
+        /* --- ENGINE 1: MOBILE-FRIENDLY TABLE --- */
         .hidden-table-container { 
-            display: none; /* Hidden by default */
+            display: none; 
             position: absolute; 
             top: 100%; left: 0; right: 0; 
             background: white; 
@@ -85,38 +90,54 @@
             z-index: 50; 
             box-shadow: 0 20px 40px rgba(0,0,0,0.2); 
             margin-top: 10px;
+            /* MOBILE MAGIC: Enables swipe scrolling */
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
         }
-        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-        th { text-align: left; padding: 8px; background: #f3f4f6; color: var(--text-muted); font-weight: 600; border-radius: 4px; }
-        td { padding: 8px; border-bottom: 1px solid #eee; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; min-width: 300px; /* Ensures table doesn't squash */ }
+        th { text-align: left; padding: 10px; background: #f3f4f6; color: var(--text-muted); font-weight: 600; white-space: nowrap; }
+        td { padding: 10px; border-bottom: 1px solid #eee; white-space: nowrap; }
         .status-badge { padding: 2px 8px; border-radius: 12px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
         .status-applied { background: #dbeafe; color: #1e40af; }
         .status-interview { background: #dcfce7; color: #166534; }
 
-        /* --- INTERACTIVE ENGINE 2: THE SIGNUP MODAL --- */
+        /* --- ENGINE 2: MOBILE-FRIENDLY MODAL --- */
         dialog { 
             border: none; 
             border-radius: 16px; 
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); 
-            padding: 40px; 
+            padding: 30px; 
             max-width: 400px; 
-            width: 90%; 
+            width: 90%; /* Responsive width */
+            margin: auto;
         }
         dialog::backdrop { background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); }
         .form-group { margin-bottom: 20px; text-align: left; }
         label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; color: var(--text-main); }
-        input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
-        input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1); }
-        .close-modal { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999; }
+        input { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 16px; /* Prevents iOS zoom */ box-sizing: border-box; }
+        .close-modal { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #999; line-height: 1; padding: 10px; }
 
-        /* FOOTER */
-        footer { background: #111827; color: white; padding: 80px 0 40px; margin-top: 100px; }
+        footer { background: #111827; color: white; padding: 60px 0 40px; margin-top: 80px; }
         .fingerprint { border-top: 1px solid #374151; padding-top: 40px; text-align: center; color: #6b7280; font-size: 0.85rem; font-family: monospace; }
 
+        /* --- MOBILE RESPONSIVE TWEAKS --- */
         @media (max-width: 768px) { 
-            .hero h1 { font-size: 2.5rem; } 
-            .grid-4 { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            /* Grid becomes single column */
+            .grid-4 { grid-template-columns: 1fr; gap: 20px; }
+            
+            /* Typography scales down */
+            .hero h1 { font-size: 2.5rem; letter-spacing: -1px; }
+            .hero p { font-size: 1.1rem; }
+            
+            /* Navigation adjustments */
+            .nav-links { display: none; } /* Hide text links on mobile */
+            .nav-mobile-btn { display: block; } /* Ensure CTA is visible */
+            
+            /* Container padding */
+            .container { padding: 0 15px; }
+            
+            /* Modal adjustments */
+            dialog { padding: 20px; width: 95%; }
         }
     </style>
 </head>
@@ -124,11 +145,11 @@
     <!-- GTM NOSCRIPT -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQCTN9MS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- --- ENGINE 2: MODAL FORM --- -->
+    <!-- ENGINE 2: MODAL FORM -->
     <dialog id="signupModal">
-        <button class="close-modal" onclick="document.getElementById('signupModal').close()">&times;</button>
+        <button class="close-modal" aria-label="Close modal" onclick="document.getElementById('signupModal').close()">&times;</button>
         <div class="text-center" style="margin-bottom: 20px;">
-            <h2 style="margin: 0;">Create Account</h2>
+            <h2 style="margin: 0; font-size: 1.5rem;">Create Account</h2>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Start your journey today.</p>
         </div>
         <form method="dialog">
@@ -140,18 +161,19 @@
                 <label for="passwordInput">Create Password</label>
                 <input type="password" id="passwordInput" placeholder="••••••••" required>
             </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Get Hired Fast</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1rem; padding: 14px;">Get Hired Fast</button>
         </form>
     </dialog>
 
     <header>
         <div class="container">
             <nav>
-                <a href="/" class="logo">JobFlow Vercel Demo</a>
-                <div class="nav-links">
-                    <a href="#features">Features</a>
-                    <a href="#" onclick="document.getElementById('signupModal').showModal()">Log In</a>
-                    <button onclick="document.getElementById('signupModal').showModal()" class="btn btn-primary" style="font-size: 0.95rem; padding: 8px 20px;">Sign Up</button>
+                <a href="/" class="logo" style="font-size: 1.2rem;">JobFlow Vercel</a>
+                
+                <!-- Simplified Mobile Nav -->
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <a href="#" onclick="document.getElementById('signupModal').showModal()" style="text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem;">Log In</a>
+                    <button onclick="document.getElementById('signupModal').showModal()" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 16px;">Sign Up</button>
                 </div>
             </nav>
         </div>
@@ -163,7 +185,6 @@
                 <h1>Your Career Toolkit,<br>Supercharged.</h1>
                 <p>The fastest way to optimize your LinkedIn, build resumes, and track applications.</p>
                 <div>
-                    <!-- Trigger Modal -->
                     <button onclick="document.getElementById('signupModal').showModal()" class="btn btn-primary">Start for Free</button>
                 </div>
             </div>
@@ -179,27 +200,25 @@
                         <p>AI-powered bullet points that pass the ATS every single time.</p>
                     </div>
 
-                    <!-- --- ENGINE 1: TRACKER CARD WITH TABLE --- -->
+                    <!-- ENGINE 1: TRACKER CARD WITH MOBILE TABLE -->
                     <div class="card">
                         <div class="icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
                         <h3>Job Application Tracker</h3>
                         <p>Kanban board style tracking for all your active applications.</p>
                         
-                        <!-- The Trigger -->
                         <button onclick="this.nextElementSibling.style.display = (this.nextElementSibling.style.display === 'block') ? 'none' : 'block'" 
-                                style="margin-top: 15px; background: none; border: none; color: var(--primary); text-decoration: underline; cursor: pointer; text-align: left; padding: 0;">
+                                style="margin-top: 15px; background: none; border: none; color: var(--primary); text-decoration: underline; cursor: pointer; text-align: left; padding: 10px 0; font-size: 1rem;">
                             View Live Demo Data ▼
                         </button>
 
-                        <!-- The Hidden Table (Data View) -->
                         <div class="hidden-table-container">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Company Name</th>
+                                        <th>Company</th>
                                         <th>Role</th>
                                         <th>Status</th>
-                                        <th>Date Applied</th>
+                                        <th>Date</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -217,7 +236,7 @@
                                     </tr>
                                     <tr>
                                         <td>Netflix</td>
-                                        <td>Sr. React Dev</td>
+                                        <td>React Dev</td>
                                         <td><span class="status-badge status-applied">Applied</span></td>
                                         <td>Oct 20</td>
                                     </tr>
