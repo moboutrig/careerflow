@@ -4,53 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. CANONICAL URL -->
+    <!-- 1. CANONICAL -->
     <link rel="canonical" href="https://careerflow-nine.vercel.app/">
-
+    
     <!-- 2. FAVICON -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="shortcut icon" href="/favicon.ico">
 
-    <!-- SEO METADATA -->
-    <title>Careerflow.ai | The All-in-One AI Job Search Toolkit</title>
-    <meta name="description" content="Accelerate your career with Careerflow.ai. The complete toolkit for resume building, LinkedIn optimization, and job application tracking. Sign up for free today.">
-    <meta name="keywords" content="Resume Builder, Job Tracker, LinkedIn Optimizer, AI Career Tool, Job Search CRM">
-    <meta name="robots" content="index, follow">
-
-    <!-- SOCIAL GRAPH (Open Graph) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://careerflow-nine.vercel.app/">
-    <meta property="og:title" content="Careerflow.ai | Your Complete Job Search Toolkit">
-    <meta property="og:description" content="Everything you need to land your next job from resumes to networking all in one place.">
-    <!-- Ensure you upload an image named 'social-image.jpg' to your public folder -->
-    <meta property="og:image" content="https://careerflow-nine.vercel.app/social-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- 3. GOOGLE ANALYTICS (Replace 'G-XXXXXXXXXX' with your real Measurement ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <!-- SCHEMA MARKUP (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Careerflow.ai",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web Browser",
-      "description": "Your complete job search toolkit, in one place.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "150" }
-    }
-    </script>
+    <!-- 3. UNIQUE SEO TITLE (So you can find it!) -->
+    <title>JobSearch Demo | The Ultimate Career Toolkit Project</title>
+    <meta name="description" content="A demo project showcasing a complete job search toolkit layout. Features include Resume Builder and Job Tracker concepts.">
+    <meta name="robots" content="noindex, nofollow"> <!-- RECOMMENDATION: Keep 'noindex' for test sites so Google doesn't punish you for duplicate content -->
 
     <style>
-        /* BASE STYLES */
+        /* ... (Keep the exact same CSS as before) ... */
         :root {
             --primary-blue: #0066ff;
             --text-dark: #111827;
@@ -62,23 +28,19 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-dark); line-height: 1.6; }
         
-        /* HEADER */
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; border-bottom: 1px solid #f3f4f6; }
         .logo { font-weight: 800; font-size: 1.5rem; color: #000; text-decoration: none; letter-spacing: -0.5px; }
         .auth-buttons { display: flex; gap: 16px; }
         
-        /* BUTTONS */
         .btn { padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s ease; }
         .btn-login { color: var(--primary-blue); border: 1px solid transparent; }
         .btn-signup { background-color: var(--primary-blue); color: white; box-shadow: 0 4px 6px -1px rgba(0, 102, 255, 0.2); }
         .btn:hover { transform: translateY(-1px); opacity: 0.9; }
 
-        /* HERO */
         .hero { text-align: center; padding: 100px 20px 80px; max-width: 900px; margin: 0 auto; }
         .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 24px; line-height: 1.1; letter-spacing: -1px; }
         .hero p { font-size: 1.25rem; color: var(--text-gray); max-width: 600px; margin: 0 auto; }
         
-        /* CATEGORIES */
         .categories-section { padding: 40px; max-width: 1200px; margin: 0 auto; }
         .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--text-dark); font-weight: 700; }
 
@@ -132,7 +94,8 @@
 <body>
 
     <header role="banner">
-        <a href="/" class="logo" aria-label="Careerflow.ai Homepage">Careerflow.ai</a>
+        <!-- REBRANDED LOGO -->
+        <a href="/" class="logo" aria-label="Home">JobSearch Demo</a>
         <nav class="auth-buttons">
             <a href="/login" class="btn btn-login">Log In</a>
             <a href="/signup" class="btn btn-signup">Sign Up</a>
@@ -140,58 +103,51 @@
     </header>
 
     <main role="main">
-        <section class="hero" aria-labelledby="hero-heading">
-            <h1 id="hero-heading">Your Complete Job Search Toolkit,<br> In One Place.</h1>
-            <p>Everything you need to land your next job from resumes to networking all in one place.</p>
+        <section class="hero">
+            <!-- REBRANDED HERO TEXT -->
+            <h1>Your Complete Job Search Project,<br> In One Place.</h1>
+            <p>Everything you need to land your next job. This is a demo layout project.</p>
         </section>
 
         <section class="categories-section">
-            <h2 class="section-title">Explore Our Features</h2>
+            <h2 class="section-title">Explore Demo Features</h2>
 
             <div class="grid-container">
                 
-                <!-- Card 1: Resume Builder -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">
-                        <!-- SVG: Document -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                         </svg>
                     </div> 
-                    <h3>Resume Builder Features</h3>
+                    <h3>Resume Builder</h3>
                 </article>
 
-                <!-- Card 2: Application Tracker -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">
-                        <!-- SVG: Push Pin / Kanban -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                         </svg>
                     </div>
-                    <h3>Job Application Tracker Features</h3>
+                    <h3>Application Tracker</h3>
                 </article>
 
-                <!-- Card 3: Networking -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">
-                        <!-- SVG: Users / Handshake -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                         </svg>
                     </div>
-                    <h3>Networking Tracker Features</h3>
+                    <h3>Networking CRM</h3>
                 </article>
 
-                <!-- Card 4: LinkedIn Optimizer -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">
-                        <!-- SVG: Rocket / Growth -->
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
-                    <h3>LinkedIn Optimizer Features</h3>
+                    <h3>Profile Optimizer</h3>
                 </article>
 
             </div>
