@@ -4,124 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 1. PRIMARY SEO METADATA -->
+    <!-- 1. FIXED CANONICAL (Matches your current URL for the audit) -->
+    <link rel="canonical" href="https://careerflow-nine.vercel.app/">
+
+    <!-- 2. ADDED FAVICON -->
+    <!-- Place a file named 'favicon.ico' in your root/public folder -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- SEO METADATA -->
     <title>Careerflow.ai | The All-in-One AI Job Search Toolkit & Resume Builder</title>
     <meta name="description" content="Accelerate your career with Careerflow.ai. The complete toolkit for resume building, LinkedIn optimization, and job application tracking. Sign up for free today.">
     <meta name="keywords" content="Resume Builder, Job Tracker, LinkedIn Optimizer, AI Career Tool, Job Search CRM">
-    <link rel="canonical" href="https://www.careerflow.ai/">
     <meta name="robots" content="index, follow">
 
-    <!-- 2. OPEN GRAPH / FACEBOOK (Social SEO) -->
+    <!-- SOCIAL GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.careerflow.ai/">
+    <meta property="og:url" content="https://careerflow-nine.vercel.app/">
     <meta property="og:title" content="Careerflow.ai | Your Complete Job Search Toolkit">
     <meta property="og:description" content="Everything you need to land your next job from resumes to networking all in one place.">
-    <meta property="og:image" content="https://www.careerflow.ai/assets/social-share-image.jpg">
-
-    <!-- 3. TWITTER CARDS -->
+    <meta property="og:image" content="https://careerflow-nine.vercel.app/assets/social-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.careerflow.ai/">
-    <meta name="twitter:title" content="Careerflow.ai | Your Complete Job Search Toolkit">
-    <meta name="twitter:description" content="Everything you need to land your next job from resumes to networking all in one place.">
-    <meta name="twitter:image" content="https://www.careerflow.ai/assets/social-share-image.jpg">
 
-    <!-- 4. SCHEMA MARKUP (JSON-LD) - The 10/10 Factor -->
+    <!-- 3. ADDED GOOGLE ANALYTICS (Replace G-XXXXXXXXXX with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- SCHEMA MARKUP -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "Careerflow.ai",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web Browser, Chrome Extension",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Your complete job search toolkit, in one place. Features include Resume Builder, Job Application Tracker, and LinkedIn Optimizer.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "1200"
-      }
+      "operatingSystem": "Web Browser",
+      "description": "Your complete job search toolkit, in one place.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
 
     <style>
-        /* CSS stays lightweight for fast First Contentful Paint (FCP) - Good for Core Web Vitals */
+        /* STYLES (Kept consistent) */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: #fff;
-        }
-
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #fff; }
         .logo { font-weight: 700; font-size: 1.25rem; color: #000; text-decoration: none; }
         .auth-buttons { display: flex; gap: 16px; }
-
-        .btn {
-            padding: 10px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
+        .btn { padding: 10px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: opacity 0.2s; }
         .btn-login { color: #0066ff; border: 1px solid transparent; }
         .btn-signup { background-color: #0066ff; color: white; }
         .btn:hover { opacity: 0.9; }
+        .hero { text-align: center; padding: 80px 20px 60px; max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; }
+        .hero p { font-size: 1.25rem; color: #666; max-width: 600px; margin: 0 auto; }
+        
+        .categories-section { padding: 40px; max-width: 1200px; margin: 0 auto; }
+        
+        /* New Style for H2 to fix hierarchy */
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #111; }
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px 60px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            line-height: 1.1;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .categories-section {
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .feature-card {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            transition: transform 0.2s;
-            /* Ensure height is uniform for visual consistency */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        .grid-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .feature-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; text-align: center; transition: transform 0.2s; display: flex; flex-direction: column; align-items: center; }
         .feature-card:hover { transform: translateY(-5px); border-color: #0066ff; }
         .icon-box { font-size: 2rem; margin-bottom: 16px; }
-        
-        /* Semantic Heading 3 styling */
         .feature-card h3 { font-size: 1.1rem; font-weight: 600; }
-
         @media (max-width: 768px) {
             .grid-container { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
@@ -131,50 +82,44 @@
 </head>
 <body>
 
-    <!-- Header / Nav -->
     <header role="banner">
         <a href="/" class="logo" aria-label="Careerflow.ai Homepage">Careerflow.ai</a>
-        <nav class="auth-buttons" aria-label="User Account Navigation">
+        <nav class="auth-buttons">
             <a href="/login" class="btn btn-login">LOG IN</a>
             <a href="/signup" class="btn btn-signup">SIGN UP</a>
         </nav>
     </header>
 
     <main role="main">
-        <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-heading">
             <h1 id="hero-heading">Your Complete Job Search Toolkit,<br> In One Place.</h1>
             <p>Everything you need to land your next job from resumes to networking all in one place.</p>
         </section>
 
-        <!-- Categories Grid -->
-        <section class="categories-section" aria-label="Feature Categories">
+        <section class="categories-section">
+            <!-- 4. FIXED HEADING HIERARCHY: Added H2 here -->
+            <h2 class="section-title">Explore Our Features</h2>
+
             <div class="grid-container">
-                
-                <!-- Card 1 -->
                 <article class="feature-card">
-                    <div class="icon-box" aria-hidden="true">📄</div> <!-- aria-hidden hides decorative icons from screen readers -->
+                    <div class="icon-box" aria-hidden="true">📄</div> 
                     <h3>Resume Builder Features</h3>
                 </article>
 
-                <!-- Card 2 -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">📌</div>
                     <h3>Job Application Tracker Features</h3>
                 </article>
 
-                <!-- Card 3 -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">🤝</div>
                     <h3>Networking Tracker Features</h3>
                 </article>
 
-                <!-- Card 4 -->
                 <article class="feature-card">
                     <div class="icon-box" aria-hidden="true">🚀</div>
                     <h3>LinkedIn Optimizer Features</h3>
                 </article>
-
             </div>
         </section>
     </main>
